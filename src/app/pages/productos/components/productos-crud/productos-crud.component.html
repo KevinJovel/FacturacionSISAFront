@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="d-flex justify-content-between">
+        <span class="p-input-icon-left">    
+            <h5 class="card-header">Lista de Productos</h5>
+        </span>
+        <button type="button" class="btn btn-primary" (click)="crearModificar(0)">Crear nuevo</button>
+       </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Codigo</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Stock</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of Productos">
+               <td>{{item.productoId}}</td>
+               <td>{{item.nombre}}</td>
+               <td>{{item.precio | currency}}</td>
+               <td>{{item.stock}}</td>
+               <td>
+                <button type="button" class="btn btn-info" (click)="crearModificar(item.productoId || 0)">Editar</button>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+  </div>

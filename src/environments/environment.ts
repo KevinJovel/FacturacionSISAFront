@@ -3,6 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  urlService: 'https://localhost:44334',
   production: false
 };
 
